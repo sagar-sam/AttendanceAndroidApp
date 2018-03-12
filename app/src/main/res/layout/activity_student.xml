@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sagar.attendance.Student">
+
+    <TextView
+        android:id="@+id/coursename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="138dp"
+        android:layout_marginTop="25dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/studentname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/coursename"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="58dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/studentattend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/studentname"
+        android:layout_alignStart="@+id/studentname"
+        android:layout_below="@+id/studentname"
+        android:layout_marginTop="30dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/studenttotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/studentattend"
+        android:layout_alignStart="@+id/studentattend"
+        android:layout_below="@+id/studentattend"
+        android:layout_marginTop="36dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/studentpercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/studenttotal"
+        android:layout_alignStart="@+id/studenttotal"
+        android:layout_below="@+id/studenttotal"
+        android:layout_marginTop="35dp"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/absent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/next"
+        android:layout_marginBottom="36dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_toEndOf="@+id/coursename"
+        android:layout_toRightOf="@+id/coursename"
+        android:onClick="markAbsent"
+        android:text="Mark Absent" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/absent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/absent"
+        android:layout_marginBottom="41dp"
+        android:onClick="next"
+        android:text="Next" />
+
+    <Button
+        android:id="@+id/previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/next"
+        android:layout_alignLeft="@+id/studentpercent"
+        android:layout_alignStart="@+id/studentpercent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:text="Previous"
+        android:onClick="previous"/>
+
+    <Button
+        android:id="@+id/present"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/absent"
+        android:layout_alignBottom="@+id/absent"
+        android:layout_alignLeft="@+id/previous"
+        android:layout_alignStart="@+id/previous"
+        android:text="MARK PRESENT"
+        android:onClick="markPresent"/>
+</RelativeLayout>
