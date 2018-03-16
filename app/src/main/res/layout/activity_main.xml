@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/img"
     tools:context="com.example.sagar.attendance.MainActivity">
 
     <Button
@@ -14,11 +14,13 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="21dp"
-        android:layout_marginStart="21dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="50dp"
+        android:background="?android:attr/actionModePasteDrawable"
+        android:onClick="course1"
         android:text="COURSE1"
-        android:onClick="course1"/>
+        android:textColor="#ffffff"/>
 
     <Button
         android:id="@+id/button2"
@@ -30,8 +32,10 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="0dp"
-        android:text="COURSE2"
-        android:onClick="course2"/>
+        android:background="?android:attr/actionModePasteDrawable"
+        android:onClick="course2"
+        android:textColor="#ffffff"
+        android:text="COURSE2" />
 
     <Button
         android:id="@+id/button3"
@@ -41,17 +45,21 @@
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/button"
         android:layout_marginBottom="78dp"
-        android:text="COURSE3"
-        android:onClick="course3"/>
+        android:background="?android:attr/actionModePasteDrawable"
+        android:onClick="course3"
+        android:textColor="#ffffff"
+        android:text="COURSE3" />
 
     <Button
         android:id="@+id/button4"
+        android:textColor="#ffffff"
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:layout_alignLeft="@+id/button2"
         android:layout_alignStart="@+id/button2"
         android:layout_alignTop="@+id/button3"
         android:layout_marginTop="0dp"
-        android:text="COURSE4"
-        android:onClick="course4"/>
+        android:background="?android:attr/actionModePasteDrawable"
+        android:onClick="course4"
+        android:text="COURSE4" />
 </RelativeLayout>

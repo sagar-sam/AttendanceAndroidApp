@@ -1,33 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/blue"
     tools:context="com.example.sagar.attendance.Student">
 
     <TextView
         android:id="@+id/coursename"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="138dp"
-        android:layout_marginTop="25dp"
-        android:text="TextView" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textColor="#ffffff"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
     <TextView
         android:id="@+id/studentname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/coursename"
-        android:layout_marginLeft="12dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="58dp"
-        android:text="TextView" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:text="TextView"
+        android:textColor="#ffffff" />
 
     <TextView
         android:id="@+id/studentattend"
@@ -37,7 +36,8 @@
         android:layout_alignStart="@+id/studentname"
         android:layout_below="@+id/studentname"
         android:layout_marginTop="30dp"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textColor="#ffffff" />
 
     <TextView
         android:id="@+id/studenttotal"
@@ -47,7 +47,8 @@
         android:layout_alignStart="@+id/studentattend"
         android:layout_below="@+id/studentattend"
         android:layout_marginTop="36dp"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textColor="#ffffff" />
 
     <TextView
         android:id="@+id/studentpercent"
@@ -57,16 +58,15 @@
         android:layout_alignStart="@+id/studenttotal"
         android:layout_below="@+id/studenttotal"
         android:layout_marginTop="35dp"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textColor="#ffffff" />
 
     <Button
         android:id="@+id/absent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/next"
-        android:layout_marginBottom="36dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginStart="25dp"
+        android:layout_below="@+id/studentpercent"
+        android:layout_marginTop="26dp"
         android:layout_toEndOf="@+id/coursename"
         android:layout_toRightOf="@+id/coursename"
         android:onClick="markAbsent"
@@ -76,10 +76,12 @@
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/absent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/absent"
-        android:layout_marginBottom="41dp"
+        android:layout_alignLeft="@+id/absent"
+        android:layout_alignStart="@+id/absent"
+        android:layout_below="@+id/present"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="13dp"
         android:onClick="next"
         android:text="Next" />
 
@@ -87,13 +89,14 @@
         android:id="@+id/previous"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/next"
         android:layout_alignBottom="@+id/next"
-        android:layout_alignLeft="@+id/studentpercent"
-        android:layout_alignStart="@+id/studentpercent"
-        android:layout_marginLeft="24dp"
-        android:layout_marginStart="24dp"
-        android:text="Previous"
-        android:onClick="previous"/>
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_toLeftOf="@+id/studentname"
+        android:layout_toStartOf="@+id/studentname"
+        android:onClick="previous"
+        android:text="Previous" />
 
     <Button
         android:id="@+id/present"
@@ -101,8 +104,9 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/absent"
         android:layout_alignBottom="@+id/absent"
-        android:layout_alignLeft="@+id/previous"
-        android:layout_alignStart="@+id/previous"
-        android:text="MARK PRESENT"
-        android:onClick="markPresent"/>
+        android:layout_toLeftOf="@+id/studentpercent"
+        android:layout_toStartOf="@+id/studentpercent"
+        android:onClick="markPresent"
+        android:text="MARK PRESENT" />
+
 </RelativeLayout>

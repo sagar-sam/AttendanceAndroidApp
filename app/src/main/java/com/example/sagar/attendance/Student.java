@@ -83,8 +83,11 @@ public class Student extends AppCompatActivity {
             e.printStackTrace();
         }
         studentname.setText(studentName.get(index));
-        studentattend.setText("Class Attended"+studentAttended.get(index));
-        studenttotal.setText("Total Classes"+studentTotal.get(index));
+        studentattend.setText("Class Attended : "+studentAttended.get(index));
+        studenttotal.setText("Total Classes : "+studentTotal.get(index));
+        float percent = (float)(studentAttended.get(index))/(float)(studentTotal.get(index));
+        percent=percent*100;
+        studentpercent.setText("Percentage : "+percent);
     }
 
     public void markAbsent(View view)
@@ -94,6 +97,9 @@ public class Student extends AppCompatActivity {
         absent=true;
         studentattend.setText("Class Attended"+studentAttended.get(index));
         studenttotal.setText("Total Classes"+(studentTotal.get(index)+1));
+        float percent = (float)(studentAttended.get(index))/(float)(studentTotal.get(index)+1);
+        percent=percent*100;
+        studentpercent.setText("Percentage : "+percent);
 
     }
 
@@ -151,8 +157,11 @@ public class Student extends AppCompatActivity {
         else {
             index++;
             studentname.setText(studentName.get(index));
-            studentattend.setText("Class Attended" + studentAttended.get(index));
-            studenttotal.setText("Total Classes" + studentTotal.get(index));
+            studentattend.setText("Class Attended : " + studentAttended.get(index));
+            studenttotal.setText("Total Classes : " + studentTotal.get(index));
+            float percent = (float)(studentAttended.get(index))/(float)(studentTotal.get(index));
+            percent=percent*100;
+            studentpercent.setText("Percentage : "+percent);
         }
     }
 
@@ -210,8 +219,11 @@ public class Student extends AppCompatActivity {
         else {
             index--;
             studentname.setText(studentName.get(index));
-            studentattend.setText("Class Attended" + studentAttended.get(index));
-            studenttotal.setText("Total Classes" + studentTotal.get(index));
+            studentattend.setText("Class Attended : " + studentAttended.get(index));
+            studenttotal.setText("Total Classes : " + studentTotal.get(index));
+            float percent = (float)(studentAttended.get(index))/(float)(studentTotal.get(index));
+            percent=percent*100;
+            studentpercent.setText("Percentage : "+percent);
         }
     }
 
@@ -222,6 +234,9 @@ public class Student extends AppCompatActivity {
         present=true;
         studentattend.setText("Class Attended"+(studentAttended.get(index)+1));
         studenttotal.setText("Total Classes"+(studentTotal.get(index)+1));
+        float percent = (float)(studentAttended.get(index)+1)/(float)(studentTotal.get(index)+1);
+        percent=percent*100;
+        studentpercent.setText("Percentage : "+percent);
     }
 
 }
